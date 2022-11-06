@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "site_slides",
+  "info": {
+    "name": "siteSlide"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "path": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "path",
+      "required": true
+    },
+    "images": {
+      "type": "component",
+      "repeatable": true,
+      "component": "list.images"
+    }
+  }
+}

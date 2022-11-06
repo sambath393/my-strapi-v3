@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "site_routes",
+  "info": {
+    "name": "siteRoutes",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "linkTo": {
+      "type": "string",
+      "required": true
+    },
+    "keywords": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "faq": {
+      "type": "component",
+      "repeatable": true,
+      "component": "seo.faq"
+    },
+    "site_posts": {
+      "via": "site_routes",
+      "collection": "site-post"
+    }
+  }
+}

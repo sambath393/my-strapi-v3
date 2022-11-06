@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_seo_faqs",
+  "info": {
+    "name": "faq",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "questionName": {
+      "type": "string",
+      "required": true
+    },
+    "acceptedAnswerText": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

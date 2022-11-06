@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_list_images",
+  "info": {
+    "name": "images",
+    "icon": "folder-open"
+  },
+  "options": {},
+  "attributes": {
+    "linkTo": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    }
+  }
+}
